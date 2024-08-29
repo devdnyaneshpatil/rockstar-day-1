@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-App</title>
+    <link rel="stylesheet" href="index.css" />
+    >
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <button onclick="window.location.href='./archive.html'" class="archive-btn">
+          Go TO Archive
+        </button>
+      </div>
+      <div class="add-todo">
+        <form id="todo-form">
+          <label for="todo-input">Todo:</label>
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter your task"
+            required
+          />
+
+          <label for="priority">Priority:</label>
+          <select name="priority" id="priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <input type="submit" value="Add Todo" />
+        </form>
+      </div>
+      <table id="todo-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="todo-body">
+          <!-- Todos will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

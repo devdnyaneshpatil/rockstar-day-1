@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive</title>
+    <link rel="stylesheet" href="archive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="window.location.href='./index.html'" class="main-btn">Go to Main page</button>
+      <div class="filters">
+        <select id="status-filter" onchange="applyFilters()">
+          <option value="All">Filter By Status: All</option>
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <select id="priority-filter" onchange="applyFilters()">
+          <option value="All">Filter By Priority: All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+      <table id="todo-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Restore</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="todo-body">
+          <!-- Todos will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="./archive.js"></script>
+  </body>
+</html>
